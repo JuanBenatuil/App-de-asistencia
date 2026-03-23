@@ -1,0 +1,154 @@
+:root {
+  --bg: #f3f7ea;
+  --card: #ffffff;
+  --text: #122018;
+  --muted: #4b5d4e;
+  --accent: #2d6a4f;
+  --accent-strong: #1b4332;
+  --error: #a4161a;
+  --ok: #2a9d8f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 10% 10%, #f5fce6 0, #eef5da 35%, #d9e8c5 100%);
+}
+
+.app-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+  border: 1px solid #95d5b2;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.hero h1 {
+  margin: 8px 0;
+  font-size: 28px;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.switcher {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.switcher button {
+  border: 1px solid #9bc9a8;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--text);
+  font-size: 15px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.switcher button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent-strong);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #d5e4cf;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(18, 32, 24, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  display: grid;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+input {
+  border: 1px solid #c9d8c3;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+button[type="submit"] {
+  border: none;
+  border-radius: 12px;
+  background: var(--accent-strong);
+  color: white;
+  padding: 11px 14px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.result {
+  margin-top: 16px;
+  border-top: 1px dashed #cfdcc8;
+  padding-top: 12px;
+}
+
+.result img {
+  margin-top: 8px;
+  max-width: 280px;
+  width: 100%;
+}
+
+.error {
+  color: var(--error);
+  font-weight: 600;
+}
+
+.ok {
+  color: var(--ok);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
